@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Demo HTML</title>
+    
+    <!-- Aquí empiezan los estilos CSS -->
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .contenedor {
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            max-width: 400px;
+            text-align: center;
+        }
+        h1 {
+            color: #0056b3;
+            margin-top: 0;
+        }
+        ul {
+            text-align: left;
+            padding-left: 20px;
+        }
+        button {
+            background-color: #0056b3;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #004494;
+        }
+        #mensaje {
+            margin-top: 20px;
+            font-weight: bold;
+            min-height: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Aquí empieza el contenido visible (HTML) -->
+    <div class="contenedor">
+        <h1>¡Hola, Mundo!</h1>
+        <p>Este es un archivo de demostración básico. Combina tres tecnologías fundamentales de la web:</p>
+        
+        <ul>
+            <li><strong>HTML</strong> para la estructura.</li>
+            <li><strong>CSS</strong> para el diseño.</li>
+            <li><strong>JavaScript</strong> para la interactividad.</li>
+        </ul>
+
+        <button id="miBoton">Haz clic aquí</button>
+        
+        <p id="mensaje"></p>
+    </div>
+
+    <!-- Aquí empieza el código JavaScript -->
+    <script>
+        // Seleccionamos el botón y el espacio para el mensaje
+        const boton = document.getElementById('miBoton');
+        const mensaje = document.getElementById('mensaje');
+
+        // Le indicamos al botón qué hacer cuando alguien le hace clic
+        boton.addEventListener('click', function() {
+            mensaje.textContent = '¡Excelente! JavaScript está funcionando correctamente. 🎉';
+            mensaje.style.color = '#28a745'; // Cambia el texto a verde
+        });
+    </script>
+
+</body>
+</html>
